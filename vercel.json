@@ -1,0 +1,14 @@
+{
+    "builds":[
+        {
+            "src": "/todoist.py",
+            "use": "@vercel/python"
+        }
+    ], 
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"/todoist.py"
+        }
+    ]
+}

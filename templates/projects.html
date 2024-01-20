@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/favicon-192.png') }}">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ url_for('static', filename='images/favicon-180.png') }}">
+    <title>FiftyList - Export To Todoist.</title>
+</head>
+<body>
+    <div class="container">
+        <div class="blobs">
+            <div class="blob big-blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+        <div class="glass-cover"></div>
+        <div class="card">
+            <center>
+                <h2 class="overlay__title">FiftyList - Export To Todoist.</h2>
+            </center>
+            <form action="/add_task" method="POST">
+                <label for="project_id">Select Project:</label>
+                <select id="project_id" name="project_id" required>
+                    {% for project in projects %}
+                    <option value="{{ project.id }}">{{ project.name }}</option>
+                    {% endfor %}
+                </select>
+
+                <div class="data-container">
+                    <h2>Confirm Data:</h2>
+                    <input type="hidden" name="api_key" value="{{ api_key }}">
+                    <div class="button-container">
+                        <input type="button" value="Close" class="close-button" onclick="window.close();">
+                        <input type="submit" value="Next" class="generate-button">
+                    </div>
+                </div>
+                <ul class="data-list">
+                    {% for item in data.split('\n\n') %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </form>
+        </div>        
+    </div>
+</body>
+</html>
