@@ -3,7 +3,7 @@ from todoist_api_python.api import TodoistAPI
 from flask_cors import CORS
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/todoist": {"origins": "https://fiftylist-en.vercel.app/"}})
+cors = CORS(app, resources={r"/todoist": {"origins": "https://fiftylist.vercel.app/"}})
 data = None  
 
 @app.route('/todoist', methods= {'GET', 'POST'})
