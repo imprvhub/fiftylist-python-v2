@@ -7,12 +7,12 @@ https://fiftylist.vercel.app/
 
 ## Key Features
 
-### React Component
+### Frontend (React.js)
 - Spotify Integration: Fetches your top 50 tracks from Spotify within a chosen timeframe (1, 6 months, or all-time classics).
 - Playlist Creation: Automatically generates a new playlist on your Spotify account with these tracks.
 - Recommendation Lists Creation: Based on your top 50 listened songs, our recommendation engine suggests an additional 20 songs to add to your playlists.
 
-### Python Component
+### Backend (Python)
 - Flask-Powered: Acts as a middleware that interfaces between React and Todoist.
 - Task Management: Organizes track details into tasks on Todoist, including artist names, song titles, album names, release dates, and genres.
 
