@@ -100,8 +100,9 @@ venv.bak/
 # mkdocs documentation
 /site
 
-# other
+#Other
 .DS_Store
+Icon?
 
 # mypy
 .mypy_cache/
