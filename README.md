@@ -1,6 +1,6 @@
-# FiftyList Music Automation Platform
+# Welcome to the [Fifty List](https://fiftylist.vercel.app/) Project.
 
-Welcome to the repository of [Fifty List - Music Automation Platform](https://fiftylist.vercel.app/) . This project is part of my portfolio showcased at [ivanluna.dev](https://ivanluna.dev) and demonstrates a sophisticated integration of React and Python. For detailed insights, please visit [ivanluna.dev](https://ivanluna.dev).
+This project is a music automation platform and is featured within my portfolio at ivanluna.dev. It showcases a seamless integration of React and Python. For detailed insights, please visit [this link](https://ivanluna.dev/projects/post-reactpython-fiftylist/).
 
 ### Live Demo:
 https://fiftylist.vercel.app/
@@ -26,7 +26,7 @@ FiftyList is an exploratory project diving deep into the collaboration of differ
 ## Installation and Usage
 
 ### For Frontend Installation:
-1. Clone the project. ( https://github.com/imprvhub/fiftylist-react )
+1. Clone this project.
  ```bash
 git clone https://github.com/imprvhub/fiftylist-react.git
 ```
@@ -47,7 +47,7 @@ cd /your/folder/directory/fiftylist-react
 ### Prerequisites:
 [**Python 3.11**](https://www.python.org/downloads/release/python-3110/)
 
-1. Clone this project.
+1. Clone the project. ( https://github.com/imprvhub/fiftylist-python )
  ```bash
 git clone https://github.com/imprvhub/fiftylist-python.git
 ```
@@ -62,8 +62,10 @@ cd /your/folder/directory/fiftylist-python
    
 IMPORTANT: Open two separate windows in your IDE to run the fullstack locally. Execute the commands to have both projects running simultaneously for them to work seamlessly.
 
-## Contributing
+## Feedback & Support
+Your input matters, and I'm ready to help address any inquiries or feedback you may have. Your contributions are essential for refining the project and enhancing the overall user experience. Don't hesitate to get in touch with me:
 
-We welcome contributions to the FiftyList project. If you have suggestions or improvements, feel free to contact us at contact@ivanluna.dev.
+Feel free to share your insights, recommendations, or suggestions for continuous improvement. If you encounter any challenges or require assistance, please [create a new GitHub issue](https://github.com/imprvhub/fiftylist-python/issues/new). Be sure to provide a detailed description of your issue to facilitate prompt and precise support.
 
-This project is part of a portfolio at ivanluna.dev - offering a unique fullstack development perspective by fusing React with Python.
+## License
+For more information regarding this topic please read the following [Terms and Conditions Section.](https://fiftylist.vercel.app/html/termsandconditions.html)
