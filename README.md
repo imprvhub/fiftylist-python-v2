@@ -2,8 +2,13 @@
 
 This project is a music automation platform and is featured within my portfolio at ivanluna.dev. It showcases a seamless integration of React and Python. For detailed insights, please visit [this link](https://ivanluna.dev/projects/post-reactpython-fiftylist/).
 
-### Live Demo:
-https://fiftylist.vercel.app/
+## Demo
+
+Visit the live app: [fiftylist.vercel.app](https://fiftylist.vercel.app)
+
+## Preview
+
+![Preview](./static/images/preview.png "Preview")
 
 ## Key Features
 
