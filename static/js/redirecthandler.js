@@ -17,7 +17,7 @@ function getShortUrlFromPython() {
     .then(data => {
         definitiveUrl = data.definitive_url;
         const button = document.getElementById("shortLinkButton");
-        button.textContent = definitiveUrl ? '' + definitiveUrl : 'Generar FiftyCard Link';
+        button.textContent = definitiveUrl ? '' + definitiveUrl : 'Create FiftyCard Link';
         button.style.color = '#18EE90';
         button.style.display = 'inline-block'; 
         const shareContainer = document.querySelector('.share-container');
