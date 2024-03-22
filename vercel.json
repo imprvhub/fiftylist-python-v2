@@ -1,14 +1,14 @@
 {
     "builds":[
         {
-            "src": "/todoist.py",
+            "src": "/share.py",
             "use": "@vercel/python"
         }
     ], 
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"/todoist.py"
+            "dest":"/share.py"
         }
     ]
 }

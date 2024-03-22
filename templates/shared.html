@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/favicon-192.png') }}">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ url_for('static', filename='images/favicon-180.png') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <title>Check out this amazing Fifty Card!</title>
+    <style>
+        {{ css_content|safe }}
+    </style>
+</head>
+<body>
+    {{ html_content|safe }}
+    <script>
+        const bucketButton = document.getElementById('bucketButton');
+        const shortLinkButton = document.getElementById('shortLinkButton');
+        function removeElement(element) {
+            if (element && element.parentNode) {
+                element.parentNode.removeChild(element);
+            }
+        }
+        removeElement(bucketButton);
+        removeElement(shortLinkButton);
+    </script>
+    <script>
+        const shareContainer = document.querySelector('.share-container');
+        shareContainer.style.display = 'flex';
+        const copyIcon = document.getElementById('copy');
+        const openIcon = document.getElementById('open');
+        const telegramIcon = document.getElementById('telegram');
+        const facebookIcon = document.getElementById('facebook');
+        const whatsappIcon = document.getElementById('whatsapp');
+        const twitterIcon = document.getElementById('twitter');
+        const redditIcon = document.getElementById('reddit');
+        const emailIcon = document.getElementById('mail');
+
+        const title = 'Check out this amazing Fifty Card!';
+        const description = 'This Fifty Card was generated dynamically from Spotify API and I wanted to share it with you!';
+        const shareUrl = window.location.href;
+
+        function copyUrlToClipboard() {
+            navigator.clipboard.writeText(shareUrl)
+                .then(() => {
+                    alert("URL copiada al portapapeles: " + shareUrl);
+                })
+                .catch(err => {
+                    console.error('Error al copiar al portapapeles: ', err);
+                });
+        }
+
+        function openInNewTab() {
+            window.open(shareUrl, '_blank');
+        }
+
+        function shareOnTelegram() {
+            const telegramUrl = 'https://t.me/share/url?url=' + encodeURIComponent(shareUrl) + '&text=' + encodeURIComponent(description);
+            window.open(telegramUrl, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const facebookUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl);
+            window.open(facebookUrl, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const whatsappUrl = 'whatsapp://send?text=' + encodeURIComponent(shareUrl);
+            window.open(whatsappUrl);
+        }
+
+        function shareOnTwitter() {
+            const twitterUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareUrl) + '&title=' + encodeURIComponent(title);
+            window.open(twitterUrl, '_blank');
+        }
+
+        function shareOnReddit() {
+            const redditUrl = 'https://www.reddit.com/submit?url=' + encodeURIComponent(shareUrl) + '&title=' + encodeURIComponent(title);
+            window.open(redditUrl, '_blank');
+        }
+        
+        function shareViaEmail() {
+            const subject = 'Check out this amazing Fifty Card!';
+            const emailBody = 'This Fifty Card was generated dynamically from Spotify  API and I wanted to share it with you! ' + shareUrl;
+            const emailUrl = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
+            window.open(emailUrl);
+        }
+        
+        openIcon.addEventListener('click', openInNewTab);
+        copyIcon.addEventListener('click', copyUrlToClipboard);
+        telegramIcon.addEventListener('click', shareOnTelegram);
+        facebookIcon.addEventListener('click', shareOnFacebook);
+        whatsappIcon.addEventListener('click', shareOnWhatsApp);
+        twitterIcon.addEventListener('click', shareOnTwitter);
+        redditIcon.addEventListener('click', shareOnReddit);
+        emailIcon.addEventListener('click', shareViaEmail);
+    </script>
+</body>
+</html>

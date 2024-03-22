@@ -103,8 +103,9 @@ venv.bak/
 #Other
 .DS_Store
 Icon?
+node_modules
+/node_modules
 
 # mypy
 .mypy_cache/
-
 settings.json

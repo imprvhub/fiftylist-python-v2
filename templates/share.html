@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/share.css') }}"> 
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/favicon-192.png') }}">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{{ url_for('static', filename='images/favicon-180.png') }}">
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <title>FiftyList - Generating FiftyCard.</title>
+</head>
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+</style>
+
+<body class="App">
+    <div class="container">
+        <div class="blobs">
+            <div class="blob big-blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+        <div class="glass-cover"></div>
+        <div class="card">
+            <div class="paragraph">Generating FiftyCard...</div>
+            <br>
+            <br>
+            <div class="loader">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
