@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400');
 
-.share-profile-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-container {
-  text-align: center; 
-  max-width: 100px; 
-  max-height: 100px;
-}
-
 .button-spotify-login {
   margin: 0 auto;
     box-shadow: var(--shadow-elevation-medium);
@@ -196,7 +184,7 @@ color: #18EE90;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-left: 35px;
+  padding-bottom: 10px;
 }
 
 .share-container:hover .share-options {
