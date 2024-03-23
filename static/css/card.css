@@ -482,6 +482,7 @@ ion-icon[aria-label="mail"]:hover {
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
+  cursor: pointer;
   background: linear-gradient(
     45deg,
     transparent,
@@ -499,6 +500,10 @@ ion-icon[aria-label="mail"]:hover {
   border-radius: 10px;
   width: 60%; 
   margin: 0 auto;
+}
+
+.header:hover {
+  cursor: pointer;
 }
 
 .logo-style {
